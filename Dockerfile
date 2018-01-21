@@ -13,4 +13,4 @@ RUN apt-get -y update \
   && apt-get --purge -y autoremove \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN chmod u+s /usr/sbin/arpin
+RUN chmod u+s /usr/sbin/arping
