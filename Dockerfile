@@ -1,4 +1,4 @@
-FROM openhab/openhab:2.2.0-amd64-debian
+FROM openhab/openhab:2.3.0-amd64-debian
 MAINTAINER Dmytro Studynskyi <dimitrystd@gmail.com>
 
 RUN apt-get -y update \
