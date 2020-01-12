@@ -1,16 +1,8 @@
-FROM openhab/openhab:2.5.0.M4-amd64-debian
+FROM openhab/openhab:2.5.0-amd64-alpine
 MAINTAINER Dmytro Studynskyi <dimitrystd@gmail.com>
 
-RUN apt-get -y update \
-  && apt-get -y install \
+RUN apk update \
+  && apk add \
   # orvibo script
   python3 \
-  # network binding
-  arping iputils-ping \
-  # pushbullet script
-  curl \
-  && apt-get autoclean \
-  && apt-get --purge -y autoremove \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-RUN chmod u+s /usr/sbin/arping
+  && rm -rf /var/cache/apk/*
